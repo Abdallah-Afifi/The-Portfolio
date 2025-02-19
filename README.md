@@ -1,2 +1,2 @@
 # Portfolio
- You can visit my Portfolio at https://github.com/Abdallah-Afifi/The-Portfolio
+ You can visit my Portfolio at https://abdallah-afifi.github.io/The-Portfolio/
