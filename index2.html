@@ -10,10 +10,39 @@
   </head>
   <body>
     <header>
-      <!-- Header content remains the same -->
+
+      <nav id="desktop-nav">
+        <div class="logo">Abdallah Afifi</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <nav id="hamburger-nav">
+        <div class="logo">Abdallah Afifi</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-      <!-- Profile Section Template -->
+
       <template id="profile-template">
         <section id="profile">
           <div class="section__pic-container">
@@ -32,7 +61,7 @@
         </section>
       </template>
 
-      <!-- About Section Template -->
+
       <template id="about-template">
         <section id="about">
           <p class="section__text__p1"></p>
@@ -52,7 +81,7 @@
         </section>
       </template>
 
-      <!-- Experience Section Template -->
+
       <template id="experience-template">
         <section id="experience">
           <p class="section__text__p1"></p>
@@ -64,7 +93,7 @@
         </section>
       </template>
 
-      <!-- Projects Section Template -->
+
       <template id="projects-template">
         <section id="projects">
           <p class="section__text__p1"></p>
@@ -76,7 +105,7 @@
         </section>
       </template>
 
-      <!-- Contact Section Template -->
+  
       <template id="contact-template">
         <section id="contact">
           <p class="section__text__p1"></p>
@@ -88,8 +117,19 @@
       </template>
     </main>
     <footer>
-      <!-- Footer content remains the same -->
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Abdallah Afifi. All Rights Reserved.</p>
     </footer>
+
     <script type="module" src="script.js"></script>
   </body>
 </html>
