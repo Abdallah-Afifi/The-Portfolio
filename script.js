@@ -1,7 +1,28 @@
-// script.js
 import contentData from './data/content.js';
 
-// Function to populate the profile section
+
+function toggleMenu() {
+  const menuLinks = document.querySelector('.menu-links');
+  const hamburgerIcon = document.querySelector('.hamburger-icon');
+  menuLinks.classList.toggle('open');
+  hamburgerIcon.classList.toggle('open');
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburgerIcon = document.querySelector('.hamburger-icon');
+  const menuLinks = document.querySelectorAll('.menu-links a');
+
+  if (hamburgerIcon) {
+    hamburgerIcon.addEventListener('click', toggleMenu);
+  }
+
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', toggleMenu);
+  });
+});
+
+
 function populateProfile() {
   const profileTemplate = document.getElementById('profile-template').content;
   const profileSection = profileTemplate.cloneNode(true);
@@ -31,7 +52,7 @@ function populateProfile() {
   document.querySelector('main').appendChild(profileSection);
 }
 
-// Function to populate the about section
+
 function populateAbout() {
   const aboutTemplate = document.getElementById('about-template').content;
   const aboutSection = aboutTemplate.cloneNode(true);
@@ -65,7 +86,7 @@ function populateAbout() {
   document.querySelector('main').appendChild(aboutSection);
 }
 
-// Function to populate the experience section
+
 function populateExperience() {
   const experienceTemplate = document.getElementById('experience-template').content;
   const experienceSection = experienceTemplate.cloneNode(true);
@@ -114,7 +135,7 @@ function populateExperience() {
   document.querySelector('main').appendChild(experienceSection);
 }
 
-// Function to populate the projects section
+
 function populateProjects() {
   const projectsTemplate = document.getElementById('projects-template').content;
   const projectsSection = projectsTemplate.cloneNode(true);
@@ -162,7 +183,7 @@ function populateProjects() {
   document.querySelector('main').appendChild(projectsSection);
 }
 
-// Function to populate the contact section
+
 function populateContact() {
   const contactTemplate = document.getElementById('contact-template').content;
   const contactSection = contactTemplate.cloneNode(true);
@@ -201,7 +222,7 @@ function populateContact() {
     const socialLink = document.createElement('p');
     const socialAnchor = document.createElement('a');
     socialAnchor.href = social.link;
-    socialAnchor.textContent = social.link.split('/')[2]; // Extracts domain name
+    socialAnchor.textContent = social.link.split('/')[2];
     socialLink.appendChild(socialAnchor);
 
     socialContainer.appendChild(socialIcon);
@@ -212,7 +233,6 @@ function populateContact() {
   document.querySelector('main').appendChild(contactSection);
 }
 
-// Call all populate functions when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   populateProfile();
   populateAbout();
